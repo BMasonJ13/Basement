@@ -86,9 +86,9 @@ namespace Ben.Player
 
         private void AiredLocomotion()
         {
-
+            movementVector = new Vector2(handler.HorizontalRaw * speed, rigidbody.velocity.y);
             if (timeSinceGrounded > 0.4f)
-                movementVector = new Vector2(rigidbody.velocity.x, -jumpHeight * gravityMultiplier);
+                movementVector = new Vector2(handler.HorizontalRaw * speed, -jumpHeight * gravityMultiplier);
 
             if ((handler.DashLeft || handler.DashRight) && timeSinceGrounded > timeTillDash && dashDuration > 0f)
             {
