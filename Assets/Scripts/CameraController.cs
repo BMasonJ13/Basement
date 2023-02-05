@@ -1,8 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+namespace Ben.Camera
 {
-    
+    /// <summary>
+    /// Class the movement of the camera.
+    /// </summary>
+    public class CameraController : MonoBehaviour
+    {
+
+    }
 }

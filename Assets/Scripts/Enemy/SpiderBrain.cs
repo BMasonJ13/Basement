@@ -89,6 +89,7 @@ namespace Ben.AI
             RaycastHit2D ceiling;
             if (ceiling = Physics2D.Raycast(feet.position, Vector2.down, checkDistance, whatIsCeiling))
             {
+                if(rigidbody.rotation != Vector2.Angle(transform.up, ceiling.normal))
                 rigidbody.rotation = Vector2.Angle(transform.up, ceiling.normal);
                 return true;
             }
